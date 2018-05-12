@@ -10,9 +10,7 @@ Phone.prototype.printInfo = function() {
 }
 
 
-Phone.prototype.newPrice = function() {
-	console.log("New price " + this.brand + "is" + this.price*0.50)
-}
+
 
 var iPhone6S = new Phone("Apple", 2250, "silver", "iOS");
 
@@ -27,6 +25,13 @@ var OnePlusOne = new Phone("OnePlus", 1840, "black", "Android");
 OnePlusOne.printInfo();
 
 
-SamsungGalaxyS6.newPrice();
+Phone.prototype.getWarrantyCost = function() {
+	console.log(" The warranty cost in case of "  + this.brand + " is " + this.price*0.10)
+}
+
+
+SamsungGalaxyS6.getWarrantyCost();
+OnePlusOne.getWarrantyCost();
+iPhone6S.getWarrantyCost();
 
 
